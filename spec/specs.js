@@ -19,8 +19,22 @@ describe('romanNumerals', function() {
       expect(romanNumerals(33)).to.equal("XXXIII");
     });
 
-    it('handles cases where there are more than three of the same character in a row', function() {
+    it('handles cases for 4', function() {
       expect(romanNumerals(4)).to.equal("IV");
+      expect(romanNumerals(14)).to.equal("XIV");
+    });
+
+    it('handles cases for 9', function() {
+      expect(romanNumerals(9)).to.equal("IX");
+      expect(romanNumerals(19)).to.equal("XIX");
+    });
+
+    it('adds the value of all the symbols for numbers in the hundreds', function() {
+      expect(romanNumerals(110)).to.equal("CX");
+    });
+
+    it('handles special cases', function() {
+      expect(romanNumerals(99)).to.equal("XCIX");
     });
 
 });
