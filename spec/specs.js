@@ -19,4 +19,8 @@ describe('romanNumerals', function() {
       expect(romanNumerals(33)).to.equal("XXXIII");
     });
 
+    it('handles cases where there are more than three of the same character in a row', function() {
+      expect(romanNumerals(4)).to.equal("IV");
+    });
+
 });

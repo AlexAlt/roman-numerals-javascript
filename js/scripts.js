@@ -11,5 +11,12 @@ var romanNumerals = function(number) {
       }
     });
   }
-  return result.join("");
+
+  if (result.join("").search("IIII") >= 0) {
+    var newResult = result.join("").replace("IIII","IV");
+    return newResult;
+  } else {
+    return result.join("");
+  }
+
 };
